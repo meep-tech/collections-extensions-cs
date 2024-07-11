@@ -6,7 +6,7 @@ namespace Meep.Tech.Collections {
   public static class EnumeratorExtensions {
 
     /// <summary>
-    /// Get an enumerable of characters from a text reader.
+    /// Get the remaining elements of the enumerator as an enumerable.
     /// </summary>
     public static IEnumerable<TType> AsEnumerable<TType>(this IEnumerator<TType> reader) {
       while(true) {

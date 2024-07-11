@@ -7,6 +7,8 @@ namespace Meep.Tech.Collections {
   /// </summary>
   public static class ListExtensions {
 
+    #region Try Get Value At
+
     /// <summary>
     /// Used to check if a list is long enough before accessing an index.
     /// </summary>
@@ -31,5 +33,33 @@ namespace Meep.Tech.Collections {
       value = default!;
       return false;
     }
+
+    #endregion
+
+    #region Index Of
+
+    /// <inheritdoc cref="IList.IndexOf(object)"/>
+    public static int IndexOf<T>(this IReadOnlyList<T> list, T value) {
+      for(int i = 0; i < list.Count; i++) {
+        if(Equals(list[i], value)) {
+          return i;
+        }
+      }
+
+      return -1;
+    }
+
+    /// <inheritdoc cref="IList.IndexOf(object)"/>
+    public static int IndexOf(this IList list, object? value) {
+      for(int i = 0; i < list.Count; i++) {
+        if(Equals(list[i], value)) {
+          return i;
+        }
+      }
+
+      return -1;
+    }
+
+    #endregion
   }
 }
