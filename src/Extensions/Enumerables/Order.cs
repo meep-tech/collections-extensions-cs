@@ -1,7 +1,7 @@
 /// <summary>
 /// Extensions aiding in simple ordering of enumerable elements.
 /// </summary>
-public static class OrderExtensions {
+public static class OrderingExtensions {
 
   #region Order [First | Last]
 

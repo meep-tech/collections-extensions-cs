@@ -4,7 +4,7 @@ namespace Meep.Tech.Collections {
   /// <summary>
   /// Extensions for adding items to collections.
   /// </summary> 
-  public static partial class EnumerableExtensions {
+  public static partial class WithExtensions {
 
     /// <summary>
     /// Adds an item to the source collection.

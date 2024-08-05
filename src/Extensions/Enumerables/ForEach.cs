@@ -3,7 +3,7 @@ namespace Meep.Tech.Collections {
   /// <summary>
   /// ForEach extension methods for IEnumerable.
   /// </summary>
-  public static class ForEachEnumerableExtensions {
+  public static class ForEachExtensions {
 
     #region ForEach
 

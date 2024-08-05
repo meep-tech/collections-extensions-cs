@@ -3,7 +3,7 @@ namespace Meep.Tech.Collections {
   /// <summary>
   /// Common Logging and Debugging Extensions for enumerables.
   /// </summary>
-  public static class DebugExtensions {
+  public static class LoggingExtensions {
 
     /// <summary>
     /// The text to use when an item is null.

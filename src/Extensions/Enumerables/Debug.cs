@@ -3,14 +3,14 @@ namespace Meep.Tech.Collections {
       /// <summary>
       /// Common Logging and Debugging Extensions for enumerables.
       /// </summary>
-      public static class EnumerableDebuggingExtensions {
+      public static class DebuggingExtensions {
 
             /// <summary>
             /// Debug Log each item in the enumerable using it's default ToString method.
             /// </summary>
             public static IEnumerable<T> DebugEach<T>(this IEnumerable<T> source)
 #if DEBUG
-              => source.ForEach(t => Console.WriteLine(t?.ToString() ?? NullText));
+              => source.ForEach(t => Console.WriteLine(t?.ToString() ?? LoggingExtensions.NullText));
 #else
       => source;
 #endif
@@ -23,7 +23,7 @@ namespace Meep.Tech.Collections {
             /// <returns></returns>
             public static IEnumerable<T> DebugEach<T>(this IEnumerable<T> source, FormattableString template)
 #if DEBUG
-              => source.ForEach(t => Console.WriteLine(template.Format.Replace("{0}", t?.ToString() ?? NullText)));
+              => source.ForEach(t => Console.WriteLine(template.Format.Replace("{0}", t?.ToString() ?? LoggingExtensions.NullText)));
 #else
       => source;
 #endif

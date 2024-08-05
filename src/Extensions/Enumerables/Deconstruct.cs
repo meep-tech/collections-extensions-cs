@@ -3,9 +3,27 @@ namespace Meep.Tech.Collections {
   /// <summary>
   /// Methods for deconstructing enumerables.
   /// </summary>
-  public static class DeconstructionEnumerableExtensions {
+  public static class DeconstructionExtensions {
 
     #region Deconstruct
+
+    /// <summary>
+    /// Deconstructs an array into a tuple of the first element and the rest of the enumerable.
+    /// </summary>
+    public static void Deconstruct<TType>(
+        this TType[] source,
+        out TType? first,
+        out TType[] rest
+    ) {
+      if(source.Length > 0) {
+        first = source[0];
+        rest = source[1..];
+      }
+      else {
+        first = default;
+        rest = [];
+      }
+    }
 
     /// <summary>
     /// Deconstructs any enumerable into a tuple of the first element and the rest of the enumerable.

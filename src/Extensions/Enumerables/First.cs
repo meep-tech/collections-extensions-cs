@@ -5,7 +5,7 @@ namespace Meep.Tech.Collections {
   /// <summary>
   /// Common Extensions for IEnumerable types.
   /// </summary>
-  public static class FirstEnumerableExtensions {
+  public static class FirstExtensions {
 
     #region First [or Default]
 

@@ -5,7 +5,7 @@ namespace Meep.Tech.Collections {
   /// <summary>
   /// Methods for skipping elements in enumerables.
   /// </summary>
-  public static class SkipEnumerableExtensions {
+  public static class SkipExtensions {
 
     #region Skip [Where]
 

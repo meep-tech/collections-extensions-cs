@@ -4,7 +4,7 @@ namespace Meep.Tech.Collections {
   /// <summary>
   /// Common Extensions for IEnumerable types.
   /// </summary>
-  public static class WhereEnumerableExtensions {
+  public static class WhereExtensions {
 
     #region Where (Is, Not)
 

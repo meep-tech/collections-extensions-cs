@@ -5,7 +5,7 @@ namespace Meep.Tech.Collections {
     /// <summary>
     /// Common Extensions for replacing and updating enumerable elements.
     /// </summary>
-    public static class ReplaceEnumerableExtensions {
+    public static class ReplacementExtensions {
 
         #region Replace
 
