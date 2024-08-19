@@ -13,6 +13,17 @@ namespace Meep.Tech.Collections {
     /// Used to check if a list is long enough before accessing an index.
     /// </summary>
     /// <returns>True if the index is within the list bounds, false otherwise.</returns>
+    public static bool TryGetValueAt<T>(this IList<T> list, int index, out T value) {
+      if(index >= 0 && index < list.Count) {
+        value = list[index];
+        return true;
+      }
+
+      value = default!;
+      return false;
+    }
+
+    /// <inheritdoc cref="TryGetValueAt{T}(IList{T}, int, out T)"/>
     public static bool TryGetValueAt<T>(this IReadOnlyList<T> list, int index, out T value) {
       if(index >= 0 && index < list.Count) {
         value = list[index];
